@@ -1,0 +1,126 @@
+<nav class="navbar navbar-expand sunil-header">
+  <div class="container">
+    <div class="navbar-nav">
+      <div class="nav-item nav-link logo">
+        <a routerLink=""><img src='assets/logo.png'></a>
+      </div>
+    </div>
+    <ul class="nav navbar-nav" routerLinkActive="active">
+
+
+      <li *ngIf="authority === 'user'" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" routerLink="user" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User Dashboard</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="pendingTasks">Pending tasks</a> 
+        </div>
+      </li>
+
+
+      <li *ngIf="authority === 'user'" class="nav-item">
+          <a class="nav-link" routerLink="home">Logout</a>
+      </li>
+      <li *ngIf="authority != 'admin' && authority != 'pm' && authority!='user'" class="nav-item">
+      <a class="nav-link" routerLink="auth/login">Login</a>
+
+      </li>
+
+      <li *ngIf="authority === 'admin'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="admin" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin Dashboard</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="signup">Add Manager</a>
+            <a class="dropdown-item" href="userList">List All Managers</a>  
+          </div>
+        </li>
+
+        <li *ngIf="authority === 'admin'" class="nav-item">
+          <a class="nav-link" routerLink="home">Logout</a>
+        </li>
+
+
+
+        <li *ngIf="authority === 'pm'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" routerLink="pm" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manager DashBoard</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="signupUser">Add Employee</a>
+            <a class="dropdown-item" href="employeeList">All Employees</a>
+            <a class="dropdown-item" href="tasks">All Tasks</a>
+            <a href="createTask" class="dropdown-item" >Add Task</a>
+            <a href="completedTasks" class="dropdown-item">Completed Tasks</a>
+            <a href="pendingTasks" class="dropdown-item">Pending Tasks</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item dropdown">
+
+            -->
+          <li *ngIf="authority === 'pm'" class="nav-item">
+      <a class="nav-link" routerLink="home">Logout</a>
+      </li>
+     <!-- <li *ngIf="!authority" class="nav-item">
+        <a class="nav-link" routerLink="auth/login">Login</a>
+      </li>-->
+
+    </ul>
+  </div>
+</nav>
+
+<div class="main-app-container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <footer class="footer navbar-expand-sm bg-dark text-center">
+  <div class="container">
+    <small class="text-white"> &copy; Copyright {{2020}},project management Management</small>
+    <p class="text-white">Made with &hearts; in India</p>
+  </div>
+</footer> -->
+
+<footer class="page-footer font-small cyan darken-3">
+  <!-- Footer Elements -->
+  <div class="container">
+    <!-- Grid row-->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-12 pt-5 text-center">
+
+        <div class="mb-5 flex-center">
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row-->
+  </div>
+  <!-- Footer Elements -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> projectmanagement.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+

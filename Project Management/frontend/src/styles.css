@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+
+
+body,h1,h2,h3,h4,h5,h6,p,span{
+  
+    font-family: 'Montserrat', sans-serif!important;
+}
+.sunilbd{
+    heigth:500px;
+}
+footer {
+    background: #00838f;
+
+  }
+  
+  .footer-copyright.text-center.py-3 {
+    background: #006972;
+    color: #fff;
+  }
+  
+  .footer-copyright a {
+    color: #fff;
+  }
+  
+  footer i {
+    color: #fff;
+  }
+  .navbar-header{
+    margin-left:5px;
+    width:100%;
+    color:white;
+  }
+   /* Sunil CSS */
+   .sunil-header {
+    display: flex;
+    align-items: center;
+    border-bottom: solid rgba(0,0,0,0.1) 1px;
+  }
+  
+  .sunil-header a {
+    color: #000;
+  }
+  
+  .sunil-header a:hover {
+    color: #541764;
+  }
+  .logo img {
+    width: 100px;
+    height: 62px;
+    object-fit: cover;
+  }
+  .navbar-nav {
+    align-items: center;
+  }
+  li.nav-item {
+    display: flex;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+  }
+
+  .login-bg {
+    z-index: 9;
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-bg h3 {
+    font-size: 40px;
+    font-weight: 700!important;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+a.btn,.btn {
+  margin: 0 15px 25px;
+  border-radius: 0;
+  background: white;
+  color: #000;
+  border-color: #000;
+}
+.main-app-container {
+  min-height: 70vh;
+}
+.footer-copyright.text-center.py-3 {
+  font-size: 12px;
+}
+li.nav-item.dropdown {}li.nav-item.dropdown {
+  position: relative;
+}
+
+li.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+}
+
+.dropdown-menu {
+  display: block;
+  left: 0;
+  right: 0;
+  border-top: 0;
+  border-radius: 0;
+  top: 62px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.dashboard-item-wrap {
+  border: solid rgba(0, 105, 114, 0.3) 1px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+.dashboard-item-wrap:hover img {
+  transform: scale(1.1);
+}
+
+.dashboard-item-wrap:hover img {
+  transition: 0.4s;
+}
+.dashboard-item-wrap a{
+  overflow: hidden;
+  display: block;
+}
+.dashboard-item-wrap:hover {
+  box-shadow: 0 0 20px rgba(0, 105, 114, 0.2);
+}
+
+.dashboard-item-wrap h3 a {
+  color: #006972;
+  text-decoration: none;
+}
+.banner {
+  height: 200px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  background-image: url("/assets/management-home.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.dashboard-item-wrap img {
+  height: 200px;
+}
+button.btn{
+  margin-left: 0;
+  margin-right: 0;
+}

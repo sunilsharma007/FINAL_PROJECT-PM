@@ -1,0 +1,42 @@
+
+
+.bgimg {
+    
+    background-image: url("/assets/management-home.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+ .bgimg {
+    height: 400px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+.bgimg h1{
+    font-weight: 600;
+}
+
+/* testimonial css */
+ .testimonial_subtitle{
+     color: #000;
+     font-size: 12px;
+ }
+   .testimonial_btn{
+     background-color: #373d4b !important;
+     color: #fff !important;
+  }
+  .seprator {
+     height: 2px;
+     width: 56px;
+     background-color: #006972;
+     margin: 7px 0 10px 0;
+ }
+ img.img-responsive {
+    width: 70px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 51%;
+}

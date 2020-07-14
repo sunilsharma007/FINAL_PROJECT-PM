@@ -1,0 +1,26 @@
+.myacc-img img {
+    width: 200px;
+    height: 200px;
+}
+
+.myaccount-div {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.myacc-img {
+    margin-bottom: 25px;
+}
+.username {
+    font-size: 18px;
+    line-height: 1;
+}
+.background-myacc {
+    background-image: url(/assets/bgmyacc.jpg);
+    background-size: contain;
+}
+
+.myaccount-div {
+    background: #fff;
+}

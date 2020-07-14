@@ -1,0 +1,39 @@
+<div class="banner"><div class="overlay"></div>
+<h1 class="text-white " style="text-transform: uppercase;font-weight: 600;">Pending Tasks</h1>
+</div>
+
+<div class="container my-5">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Task List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Task Description</th>
+        <th>Assigned To</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Completed?</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let task of tasks | async">
+        <td>{{task.taskName}}</td>
+        <td>{{task.taskDescription}}</td>
+        <td>{{task.assignedTo}}</td>
+        <td>{{task.startDate}}</td>
+        <td>{{task.endDate}}</td>
+        <td>{{task.completed}}</td>
+        <td>
+          <button (click)="taskUpdate(task.id)"class="btn btn-info" style="margin-left: 10px">Mark Completed</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

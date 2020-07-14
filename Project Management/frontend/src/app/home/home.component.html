@@ -1,0 +1,39 @@
+<div class="background-myacc py-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 m-auto">
+      <div class="myaccount-div">
+        <div class="myacc-img">
+          <img src="/assets/user.png" alt="">
+        </div>
+        <div class="myacc-content">
+          <div *ngIf="info.token; else loggedOut">
+            <div class="row mb-3 mt-5">
+              <div class="col-md-4 offset-2">
+                <p class="m-0 username"><strong>Username</strong> </p>
+                <p class="username-val">{{info.username}}</p>
+              </div>
+              <div class="col-md-4">
+                <p class="m-0 username"><strong>Designation</strong> </p>
+                <p *ngIf="authority === 'user'" class="username-val">Employee</p>
+                <p *ngIf="authority === 'pm'" class="username-val">Manager</p>
+                <p *ngIf="authority === 'admin'" class="username-val">Admin</p>
+              </div>
+            </div>
+            <button class="btn btn-danger mb-0" (click)="logout()">Logout</button>
+          </div>
+
+          <ng-template #loggedOut>
+            <p>Logged out successfully!</p>
+            <p>Click on Login button to login again</p>
+            <div>
+            <a href="auth/login" class="btn btn-primary" role="button">Login</a>
+            </div>
+
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
